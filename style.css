@@ -1,0 +1,221 @@
+:root{
+  --blueColor: #55B6B2;
+  --grayColor: #F8F8F6;
+  --whiteColor: #fff;
+  --blackColor: #1B2A39;
+}
+body{
+  background-color: var(--grayColor);
+  font-family: Helvetica;
+  color: var(--blackColor);
+  font-size: 14px;
+}
+*{
+  box-sizing: border-box;
+}
+.selectOption{
+  display: flex;
+}
+.selectElement{
+  margin-right: 10px;
+}
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"]+label{
+  position: relative;
+  padding-left: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+input[type="checkbox"]+label::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 4px;
+  background-color: var(--blueColor);
+}
+input[type="checkbox"]:checked+label::after{
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  border-right: 2px solid var(--whiteColor);
+  border-bottom: 2px solid var(--whiteColor);
+  height: 6px;
+  width: 3px;
+  transform: rotate(45deg);
+}
+.main{
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+  background-color: var(--whiteColor);
+  padding: 80px;
+  border-radius: 4px;
+  margin-top: 100px;
+}
+input[type="number"],
+input[type="date"],
+input[type="text"]{
+  background-color: var(--grayColor);
+  border:2px solid var(--blueColor);
+  padding:10px 15px;
+  border-radius: 4px;
+  color: #1B2A39;
+  font-size: 13px;
+  height: 40px;
+}
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="text"]:focus{
+  outline:none;
+}
+button,
+input[type="submit"]{
+  background-color: var(--blueColor);
+  border:2px solid var(--blueColor);
+  padding:10px 15px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+#getjsonbtn{
+  background-color: var(--blueColor);
+  border:2px solid var(--blueColor);
+  padding:10px 15px;
+  margin-top:10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.remove{
+  padding:4px 8px;
+}
+form{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+form input{
+  flex: 1;
+  margin-left: 5px;
+  margin-right: 0px;
+}
+.searchboxparent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh; /* Set the height to 100% of the viewport height */
+}
+.selectOption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.deleteBtn{
+  text-decoration: none;
+  color: #55B6B2;
+}
+.table-responsive{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 10px;
+  width: 100%;
+}
+.expense-data {
+  width: 100%;
+  border-spacing: 0;
+}
+th{
+  background-color: var(--blueColor);
+  padding:10px 0px;
+  padding-right: 0px;
+  color: #fff;
+  border: 1px solid;
+}
+td{
+  padding:10px 0px;
+  text-align: center;
+}
+tr:nth-child(odd) {
+  background: var(--grayColor);
+}
+th:first-child,
+td:first-child {
+  width: 120px;
+}
+th:last-child,
+td:last-child {
+  text-align:center;
+}
+.dropdown{
+  background-color: var(--grayColor);
+  border:2px solid var(--blueColor);
+  padding:10px 15px;
+  border-radius: 4px;
+  color: #1B2A39;
+  font-size: 14px;
+  height: 40px;
+}
+.salaryparent input{
+  width: 4px;
+}
+.balanceparent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.balance{
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #55B6B2;
+  font-family: Helvetica;
+  color:#fff;
+  font-size: 14px;
+  text-align: center;
+  padding-top:5px ;
+  font-weight: bolder;
+}
+@media only screen and (max-width: 860px) {
+            #submitbtn{
+              margin-top: 10px;
+            }
+}
+@media only screen and (max-width: 763px) {
+  .amount{
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 560px) {
+.expenseDate{
+  margin-top: 10px;
+}
+}
+@media only screen and (max-width: 517px) {
+.name{
+  margin-top: 10px;
+}
+.dropdown{
+  margin-top: 10px;
+}
+}
+@media only screen and (max-width: 514px) {
+.dropdown{
+  margin-top: 10px;
+  width: 100%;
+}
+}

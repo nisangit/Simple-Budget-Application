@@ -1,0 +1,11 @@
+{
+    "jan":[
+    {     
+        "category":"Food",
+        "SubCategory":"Dominos",
+        "amount":"1000",
+        "date":"31/08/2023"
+      
+    }
+  ]
+}
